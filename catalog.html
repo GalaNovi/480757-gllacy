@@ -28,9 +28,39 @@
           <li><a href="#">О Компании</a></li>
         </ul>
         <ul class="user-navigation">
-          <li>Search</li>
-          <li>Вход</li>
-          <li><a href="#">2 товара</a></li>
+          <li>Поиск
+            <div class="form search-form">
+              <!-- Форма -->
+            </div>
+          </li>
+          <li>Вход
+            <div class="form log-in-form">
+              <!-- Форма -->
+              <a href="#">Забыли пароль?</a>
+              <a href="#">Новая регистрация</a>
+            </div>
+          </li>
+          <li><a href="#">2 товара</a>
+            <div class="basket">
+              <h2 class="visually-hidden">Корзина товаров</h2>
+              <table>
+                <tr>
+                  <td><span>X</span> <img src="http://placehold.it/33x33" alt="Мороженка"></td>
+                  <td>Пломбир с апельсиновым джемом</td>
+                  <td>1,5 кг x <span>200 руб.</span></td>
+                  <td>300 руб.</td>
+                </tr>
+                <tr>
+                  <td><span>X</span> <img src="http://placehold.it/33x33" alt="Мороженка"></td>
+                  <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                  <td>1,5 кг x <span>300 руб.</span></td>
+                  <td>450 руб.</td>
+                </tr>
+              </table>
+              <p><b>Итого: 750 руб.</b></p>
+              <a class="button" href="#">Оформить заказ</a>
+            </div>
+          </li>
         </ul>
       </nav>
       <ul class="breadcrumbs">
@@ -182,7 +212,7 @@
         </ul>
 
         <ul class="paginator">
-          <li class="active">1</li>
+          <li class="active"><a>1</a></li>
           <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
           <li><a href="#">4</a></li>
@@ -214,37 +244,5 @@
           HTML Academy</a> &#9400; 2017</p>
       </div>
     </footer>
-
-<!-- ======================== Модалки ============================== -->
-
-    <div class="form log-in-form">
-      <!-- Форма -->
-      <a href="#">Забыли пароль?</a>
-      <a href="#">Новая регистрация</a>
-    </div>
-
-    <div class="form search-form">
-      <!-- Форма -->
-    </div>
-
-    <div class="basket">
-      <h2 class="visually-hidden">Корзина товаров</h2>
-      <table>
-        <tr>
-          <td><span>X</span> <img src="http://placehold.it/33x33" alt="Мороженка"></td>
-          <td>Пломбир с апельсиновым джемом</td>
-          <td>1,5 кг x <span>200 руб.</span></td>
-          <td>300 руб.</td>
-        </tr>
-        <tr>
-          <td><span>X</span> <img src="http://placehold.it/33x33" alt="Мороженка"></td>
-          <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-          <td>1,5 кг x <span>300 руб.</span></td>
-          <td>450 руб.</td>
-        </tr>
-      </table>
-      <p><b>Итого: 750 руб.</b></p>
-      <a class="button" href="#">Оформить заказ</a>
-    </div>
   </body>
 </html>
