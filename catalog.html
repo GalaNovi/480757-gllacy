@@ -7,7 +7,6 @@
   </head>
   <body>
     <header class="main-header">
-
       <div class="logo">
         <a href="index.html"><img src="http://placehold.it/154x64"
           alt="Логотип магазина Глэйси"></a>
@@ -29,29 +28,48 @@
         </ul>
         <ul class="user-navigation">
           <li>Поиск
-            <div class="form search-form">
-              <!-- Форма -->
+            <div class="form-container search-container">
+              <form class="search-form" action="http://echo.htmlacademy.ru" method="post">
+                <p>
+                  <label class="visually-hidden" for="search-field">Поле ввода для поиска</label>
+                  <input id="search-field" type="search" name="search" value="" placeholder="Что ищем?">
+                </p>
+              </form>
             </div>
           </li>
           <li>Вход
-            <div class="form log-in-form">
-              <!-- Форма -->
-              <a href="#">Забыли пароль?</a>
-              <a href="#">Новая регистрация</a>
+            <div class="form-container login-container">
+              <form class="login-form" action="http://echo.htmlacademy.ru" method="post">
+                <p>
+                  <label class="visually-hidden" for="email-field">Ваша электронная почта</label>
+                  <input id="email-field" type="email" name="email" value="" placeholder="Электронная почта">
+                </p>
+                <p>
+                  <label class="visually-hidden" for="password-field">Ваш пароль</label>
+                  <input id="password-field" type="password" name="password" value="" placeholder="Пароль">
+                </p>
+                <button class="button" type="submit">Войти</button>
+                <ul>
+                  <li><a href="#">Забыли пароль?</a></li>
+                  <li><a href="#">Новая регистрация</a></li>
+                </ul>
+              </form>
             </div>
           </li>
-          <li><a href="#">2 товара</a>
+          <li>2 товара
             <div class="basket">
               <h2 class="visually-hidden">Корзина товаров</h2>
               <table>
                 <tr>
-                  <td><span>X</span> <img src="http://placehold.it/33x33" alt="Мороженка"></td>
+                  <td><button class="basket-item-delete" type="button">Удалить</button></td>
+                  <td><img src="http://placehold.it/33x33" alt="Пломбир с апельсиновым джемом"></td>
                   <td>Пломбир с апельсиновым джемом</td>
                   <td>1,5 кг x <span>200 руб.</span></td>
                   <td>300 руб.</td>
                 </tr>
                 <tr>
-                  <td><span>X</span> <img src="http://placehold.it/33x33" alt="Мороженка"></td>
+                  <td><button class="basket-item-delete" type="button">Удалить</button></td>
+                  <td><img src="http://placehold.it/33x33" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
                   <td>Клубничный пломбир с присыпкой из белого шоколада</td>
                   <td>1,5 кг x <span>300 руб.</span></td>
                   <td>450 руб.</td>
@@ -64,10 +82,10 @@
         </ul>
       </nav>
       <div class="time-number">
-        <p>С 10 до 20, ежедневно</p>
-        <p>8 812 450-25-25</p>
+        <h3 class="visually-hidden">График работы и телефон</h3>
+        <p class="work-time">С 10 до 20, ежедневно</p>
+        <p class="phone-number">8 812 450-25-25</p>
       </div>
-
     </header>
 
     <main>
@@ -81,8 +99,91 @@
 
       <section class="product-filter">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-
-        <!--=========== Форма-фильтр=============== -->
+        <form class="filter-form" action="http://echo.htmlacademy.ru" method="post">
+          <p>
+            <label for="sorting-filter">Сортировка:</label>
+            <select id="sorting-filter" class="sorting-filter" name="sorting-filter">
+              <option value="popularity">по популярности</option>
+              <option value="first-inexpensive">сначала недорогие</option>
+              <option value="first-expensive">сначала дорогие</option>
+              <option value="fat-content">по жирности</option>
+            </select>
+          </p>
+          <p>
+            <label for="price-filter">Цена: 100 руб. - 500 руб.</label>
+            <input id="price-filter" type="range" name="price-filter" min="100" max="1000" step="50">
+          </p>
+          <fieldset>
+            <legend class="fat-content-filter">Жирность:</legend>
+            <p>
+              <label>
+                <input class="visually-hidden" type="radio" name="fat-content" value="0%">
+                <span class="radio-indicator"></span>
+                0%
+              </label>
+            </p>
+            <p>
+              <label>
+                <input class="visually-hidden" type="radio" name="fat-content" value="before-10%" checked>
+                <span class="radio-indicator"></span>
+                до 10%
+              </label>
+            </p>
+            <p>
+              <label>
+                <input class="visually-hidden" type="radio" name="fat-content" value="before-30%">
+                <span class="radio-indicator"></span>
+                до 30%
+              </label>
+            </p>
+            <p>
+              <label>
+                <input class="visually-hidden" type="radio" name="fat-content" value="after-30%">
+                <span class="radio-indicator"></span>
+                выше 30%
+              </label>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend class="fillers-filter">Наполнители:</legend>
+            <p>
+              <label>
+                <input class="visually-hidden" type="checkbox" name="chocolade" value="" checked>
+                <span class="checkbox-indicator"></span>
+                шоколадные
+              </label>
+            </p>
+            <p>
+              <label>
+                <input class="visually-hidden" type="checkbox" name="sugar-powders" value="" checked>
+                <span class="checkbox-indicator"></span>
+                сахарные присыпки
+              </label>
+            </p>
+            <p>
+              <label>
+                <input class="visually-hidden" type="checkbox" name="fruits" value="">
+                <span class="checkbox-indicator"></span>
+                фрукты
+              </label>
+            </p>
+            <p>
+              <label>
+                <input class="visually-hidden" type="checkbox" name="syrups" value="">
+                <span class="checkbox-indicator"></span>
+                сиропы
+              </label>
+            </p>
+            <p>
+              <label>
+                <input class="visually-hidden" type="checkbox" name="jams" value="">
+                <span class="checkbox-indicator"></span>
+                джемы
+              </label>
+            </p>
+          </fieldset>
+          <button class="filter-button" type="submit">Применить</button>
+        </form>
       </section>
 
       <section class="catalog">
@@ -224,6 +325,7 @@
 
     <footer class="main-footer">
       <div class="footer-socials">
+        <h3 class="visually-hidden">Мы в социальных сетях</h3>
         <ul class="socials-list">
           <li class="socials-item"><a class="socials-link twitter" href="#">Твиттер</a></li>
           <li class="socials-item"><a class="socials-link instagram" href="#">Инстаграм</a></li>
@@ -232,6 +334,7 @@
         </ul>
       </div>
       <div class="other-info">
+        <h3 class="visually-hidden">Другая информация</h3>
         <ul class="other-info-list">
           <li><a class="providers-info" href="#">Для поставщиков</a></li>
           <li><a href="#">О производстве</a></li>
@@ -240,6 +343,7 @@
         </ul>
       </div>
       <div class="copyright">
+        <h3 class="visually-hidden">Разработчик</h3>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="http://placehold.it/108x39" alt="Логотип HTML Academy">
         </a>
