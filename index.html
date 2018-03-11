@@ -7,7 +7,6 @@
   </head>
   <body>
     <header class="main-header">
-
       <div class="logo">
         <a><img src="http://placehold.it/154x64" alt="Логотип магазина Глэйси"></a>
       </div>
@@ -28,23 +27,41 @@
         </ul>
         <ul class="user-navigation">
           <li>Поиск
-            <div class="form search-form">
-              <!-- Форма -->
+            <div class="form-container search-container">
+              <form class="search-form" action="http://echo.htmlacademy.ru" method="post">
+                <p>
+                  <label class="visually-hidden" for="search-field">Поле ввода для поиска</label>
+                  <input id="search-field" type="search" name="search" value="" placeholder="Что ищем?">
+                </p>
+              </form>
             </div>
           </li>
           <li>Вход
-            <div class="form log-in-form">
-              <!-- Форма -->
-              <a href="#">Забыли пароль?</a>
-              <a href="#">Новая регистрация</a>
+            <div class="form-container login-container">
+              <form class="login-form" action="http://echo.htmlacademy.ru" method="post">
+                <p>
+                  <label class="visually-hidden" for="email-field">Ваша электронная почта</label>
+                  <input id="email-field" type="email" name="email" value="" placeholder="Электронная почта">
+                </p>
+                <p>
+                  <label class="visually-hidden" for="password-field">Ваш пароль</label>
+                  <input id="password-field" type="password" name="password" value="" placeholder="Пароль">
+                </p>
+                <button class="button" type="submit">Войти</button>
+                <ul>
+                  <li><a href="#">Забыли пароль?</a></li>
+                  <li><a href="#">Новая регистрация</a></li>
+                </ul>
+              </form>
             </div>
           </li>
-          <li><a href="#">Пусто</a></li>
+          <li><a href="#" aria-label="Корзина товаров">Пусто</a></li>
         </ul>
       </nav>
       <div class="time-number">
-        <p>С 10 до 20, ежедневно</p>
-        <p>8 812 450-25-25</p>
+        <h3 class="visually-hidden">График работы и телефон</h3>
+        <p class="work-time">С 10 до 20, ежедневно</p>
+        <p class="phone-number">8 812 450-25-25</p>
       </div>
 
     </header>
@@ -68,9 +85,9 @@
           </div>
         </div>
         <div class="toggles">
-          <div class="toggle">o</div>
-          <div class="toggle">o</div>
-          <div class="toggle">o</div>
+          <button class="toggle" type="button">o</button>
+          <button class="toggle" type="button">o</button>
+          <button class="toggle" type="button">o</button>
         </div>
       </div>
 
@@ -150,14 +167,14 @@
             технологий.
           </li>
           <li class="features-item">
-            Для приготовления мороженого используются настоящие сливки и молоко
-            высочайшего качества. Все дополнительные ингредиенты и добавки
-            произведены из натурального, экологически чистого сырья.
-          </li>
-          <li class="features-item">
             Закупка ингредиентов  производится только у проверенных фермерских
             хозяйств и компаний, с которыми нас связывает долговременное
             сотрудничество.
+          </li>
+          <li class="features-item">
+            Для приготовления мороженого используются настоящие сливки и молоко
+            высочайшего качества. Все дополнительные ингредиенты и добавки
+            произведены из натурального, экологически чистого сырья.
           </li>
           <li class="features-item">
             Доставка нашего мороженого до заказчиков осуществляется в
@@ -165,7 +182,6 @@
             в пути и позволяет сохранить превосходный вкус.
           </li>
         </ul>
-
       </section>
 
       <section class="new-in-blog">
@@ -174,18 +190,24 @@
       </section>
 
       <section class="subscribe">
-        <h2 class="visually-didden">Подписка на новости</h2>
+        <h2 class="visually-hidden">Подписка на новости</h2>
         <p class="subscribe-text">
           Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего
           самого вкусного, что у нас происходит. Обещаем не спамить и не слать
           всякой ненужной ерунды. Честно =)
         </p>
-        <!-- ==================Здесь будет форма====================== -->
+        <form class="subscribe-form" action="http://echo.htmlacademy.ru" method="post">
+          <p>
+            <label class="visually-hidden" for="subscribe-email">Ваша электронная почта</label>
+            <input id="subscribe-email" type="email" name="subscribe-email" value="" placeholder="Электронная почта">
+          </p>
+          <button class="button" type="submit">Отправить</button>
+        </form>
       </section>
 
       <section class="map">
         <h2 class="visually-hidden">Как нас найти</h2>
-        <img src="img/background-img/map.jpg" alt="Карта проезда">
+        <img src="img/background-img/map.jpg" alt="Адрес нашего магазина: ул. Большая Конюшенная 19/8, Санкт-Петербург">
         <div class="contacts">
           <h2 class="visually-hidden">Наши контакты</h2>
           <div class="contact-address">
@@ -196,7 +218,7 @@
             <p class="contact-type">Для заказов по телефону:</p>
             <p class="phone"><b>8 812 450-25-25</b> (с 10 до 20 ежедневно)</p>
           </div>
-          <a class="button" href="#">Форма обратной связи</a>
+          <button class="button" type="button">Форма обратной связи</button>
         </div>
       </section>
 
@@ -204,6 +226,7 @@
 
     <footer class="main-footer">
       <div class="footer-socials">
+        <h3 class="visually-hidden">Мы в социальных сетях</h3>
         <ul class="socials-list">
           <li class="socials-item"><a class="socials-link twitter" href="#">Твиттер</a></li>
           <li class="socials-item"><a class="socials-link instagram" href="#">Инстаграм</a></li>
@@ -212,6 +235,7 @@
         </ul>
       </div>
       <div class="other-info">
+        <h3 class="visually-hidden">Другая информация</h3>
         <ul class="other-info-list">
           <li><a class="providers-info" href="#">Для поставщиков</a></li>
           <li><a href="#">О производстве</a></li>
@@ -220,6 +244,7 @@
         </ul>
       </div>
       <div class="copyright">
+        <h3 class="visually-hidden">Разработчик</h3>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="http://placehold.it/108x39" alt="Логотип HTML Academy">
         </a>
@@ -230,8 +255,22 @@
 
 <!-- ======================== Модалка ============================== -->
 
-    <div class="form feedback-form">
-      <!-- Форма -->
-    </div>
+    <section class="form-container feedback-container">
+      <h3>Мы обязательно вам ответим!</h3>
+      <form class="feedback-form" action="http://echo.htmlacademy.ru" method="post">
+        <p>
+          <label class="visually-hidden" for="feedback-name">Как вас зовут?</label>
+          <input id="feedback-name" type="text" name="feedback-name" value="" placeholder="Как вас зовут?">
+        </p>
+        <p>
+          <label class="visually-hidden" for="feedback-email">Ваша почта для ответа</label>
+          <input id="feedback-email" type="email" name="feedback-email" value="" placeholder="Ваша почта для ответа">
+        </p>
+        <label class="visually-hidden" for="feedback-wishes">Ваши пожелания</label>
+        <textarea id="feedback-wishes" name="feedback-wishes" rows="8" cols="40" placeholder="Напишите что-нибудь..."></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" type="button">Закрыть</button>
+    </section>
   </body>
 </html>
