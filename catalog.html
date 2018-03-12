@@ -14,7 +14,7 @@
 
       <nav class="main-menu">
         <ul class="main-navigation">
-          <li class="active">Каталог
+          <li class="active"><a href="#">Каталог</a>
             <ul class="catalog-navigation">
               <li><a href="#">Новинки</a></li>
               <li class="active"><a>Сливочное</a></li>
@@ -27,7 +27,7 @@
           <li><a href="#">О Компании</a></li>
         </ul>
         <ul class="user-navigation">
-          <li>Поиск
+          <li><a href="#">Поиск</a>
             <div class="form-container search-container">
               <form class="search-form" action="http://echo.htmlacademy.ru" method="post">
                 <p>
@@ -37,7 +37,7 @@
               </form>
             </div>
           </li>
-          <li>Вход
+          <li><a href="#">Вход</a>
             <div class="form-container login-container">
               <form class="login-form" action="http://echo.htmlacademy.ru" method="post">
                 <p>
@@ -56,19 +56,19 @@
               </form>
             </div>
           </li>
-          <li>2 товара
+          <li><a href="#" aria-label="Корзина товаров">2 товара</a>
             <div class="basket">
               <h2 class="visually-hidden">Корзина товаров</h2>
               <table>
                 <tr>
-                  <td><button class="basket-item-delete" type="button">Удалить</button></td>
+                  <td><a class="basket-item-delete" href="#">Удалить</a></td>
                   <td><img src="http://placehold.it/33x33" alt="Пломбир с апельсиновым джемом"></td>
                   <td>Пломбир с апельсиновым джемом</td>
                   <td>1,5 кг x <span>200 руб.</span></td>
                   <td>300 руб.</td>
                 </tr>
                 <tr>
-                  <td><button class="basket-item-delete" type="button">Удалить</button></td>
+                  <td><a class="basket-item-delete" href="#">Удалить</a></td>
                   <td><img src="http://placehold.it/33x33" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
                   <td>Клубничный пломбир с присыпкой из белого шоколада</td>
                   <td>1,5 кг x <span>300 руб.</span></td>
@@ -109,38 +109,45 @@
               <option value="fat-content">по жирности</option>
             </select>
           </p>
-          <p>
-            <label for="price-filter">Цена: 100 руб. - 500 руб.</label>
-            <input id="price-filter" type="range" name="price-filter" min="100" max="1000" step="50">
-          </p>
+            <fieldset>
+              <legend>Цена:</legend>
+                <p>
+                  <input id="price-min" type="text" name="price-min" value="100">
+                  <label for="price-min">руб.</label>
+                  -
+                  <input id="price-max" type="text" name="price-max" value="500">
+                  <label for="price-max">руб.</label>
+                </p>
+                <div class="line">
+                  <div class="slider-1"></div>
+                  <div class="line-between-sliders"></div>
+                  <div class="slider-2"></div>
+                </div>
+            </fieldset>
           <fieldset>
             <legend class="fat-content-filter">Жирность:</legend>
             <p>
               <label>
                 <input class="visually-hidden" type="radio" name="fat-content" value="0%">
-                <span class="radio-indicator"></span>
-                0%
+                <span>0%</span>
               </label>
             </p>
             <p>
               <label>
                 <input class="visually-hidden" type="radio" name="fat-content" value="before-10%" checked>
-                <span class="radio-indicator"></span>
-                до 10%
+                <span>до 10%</span>
               </label>
             </p>
             <p>
               <label>
                 <input class="visually-hidden" type="radio" name="fat-content" value="before-30%">
-                <span class="radio-indicator"></span>
-                до 30%
+                <span>до 30%</span>
               </label>
             </p>
             <p>
               <label>
                 <input class="visually-hidden" type="radio" name="fat-content" value="after-30%">
-                <span class="radio-indicator"></span>
-                выше 30%
+                <span>выше 30%</span>
               </label>
             </p>
           </fieldset>
@@ -148,37 +155,32 @@
             <legend class="fillers-filter">Наполнители:</legend>
             <p>
               <label>
-                <input class="visually-hidden" type="checkbox" name="chocolade" value="" checked>
-                <span class="checkbox-indicator"></span>
-                шоколадные
+                <input class="visually-hidden" type="checkbox" name="chocolade" value="chocolade" checked>
+                <span>шоколадные</span>
               </label>
             </p>
             <p>
               <label>
-                <input class="visually-hidden" type="checkbox" name="sugar-powders" value="" checked>
-                <span class="checkbox-indicator"></span>
-                сахарные присыпки
+                <input class="visually-hidden" type="checkbox" name="sugar-powders" value="sugar-powders" checked>
+                <span>сахарные присыпки</span>
               </label>
             </p>
             <p>
               <label>
-                <input class="visually-hidden" type="checkbox" name="fruits" value="">
-                <span class="checkbox-indicator"></span>
-                фрукты
+                <input class="visually-hidden" type="checkbox" name="fruits" value="fruits">
+                <span>фрукты</span>
               </label>
             </p>
             <p>
               <label>
-                <input class="visually-hidden" type="checkbox" name="syrups" value="">
-                <span class="checkbox-indicator"></span>
-                сиропы
+                <input class="visually-hidden" type="checkbox" name="syrups" value="syrups">
+                <span>сиропы</span>
               </label>
             </p>
             <p>
               <label>
-                <input class="visually-hidden" type="checkbox" name="jams" value="">
-                <span class="checkbox-indicator"></span>
-                джемы
+                <input class="visually-hidden" type="checkbox" name="jams" value="jams">
+                <span>джемы</span>
               </label>
             </p>
           </fieldset>
@@ -314,11 +316,11 @@
         </ul>
 
         <ul class="paginator">
-          <li class="active"><a>1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
+          <li class="active"><a aria-label="Страница 1">1</a></li>
+          <li><a href="#" aria-label="Страница 2">2</a></li>
+          <li><a href="#" aria-label="Страница 3">3</a></li>
+          <li><a href="#" aria-label="Страница 4">4</a></li>
+          <li><a href="#" aria-label="Страница 5">5</a></li>
         </ul>
       </section>
     </main>
