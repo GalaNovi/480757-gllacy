@@ -42,13 +42,11 @@ a {
 .button:hover {
   background: linear-gradient(to bottom, #f58669, #ec6f5e);
   box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 1);
-  border-radius: 30px;
 }
 
 .button:active {
   background: linear-gradient(to bottom, #d74632, #e1613e);
   box-shadow: inset 0 2px 2px 0 rgba(172, 16, 0, 1);
-  border-radius: 30px;
 }
 
 .main-navigation {
@@ -58,19 +56,26 @@ a {
   list-style: none;
 }
 
- .main-navigation-item {
+.main-navigation-item {
+  padding-top: 7px;
+  padding-bottom: 6px;
+  padding-left: 13px;
+  padding-right: 13px;
+
   line-height: 18px;
   font-weight: 700;
   color: #fff;
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
 }
 
 .main-navigation-item:hover,
-.main-navigation-item:focus {
+.main-navigation-item:focus,
+.main-navigation-item.active:hover,
+.main-navigation-item.active:focus {
   color: #323232;
 
-  border-bottom: none;
+  background-color: #f7f6f3;
 }
 
 .main-navigation-item.active {
@@ -101,6 +106,21 @@ a {
   font-weight: 700;
 }
 
+.catalog-navigation-item:hover,
+.catalog-navigation-item:focus {
+  background-color: #fbded7;
+}
+
+.catalog-navigation-item:active {
+  background-color: #f6b5a5;
+}
+
+.catalog-navigation-item.current {
+  color: #fff;
+
+  background-color: #d07058;
+}
+
 .user-navigation {
   padding: 0;
   margin: 0;
@@ -118,6 +138,50 @@ a {
 .user-navigation-item:hover,
 .user-navigation-item:focus {
   color: #323232;
+}
+
+input[type="search"],
+input[type="email"],
+input[type="text"]:not(.price-field),
+input[type="password"],
+textarea {
+  min-width: 240px;
+
+  padding: 13px;
+  padding-bottom: 10px;
+
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000;
+
+  background-color: #fff;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="search"]:hover,
+input[type="email"]:hover,
+input[type="text"]:hover:not(.price-field),
+input[type="password"]:hover,
+textarea:hover {
+  padding: 12px;
+  padding-bottom: 9px;
+
+  border: 2px solid #c7c6c5;
+}
+
+input[type="search"]:focus,
+input[type="email"]:focus,
+input[type="text"]:focus:not(.price-field),
+input[type="password"]:focus,
+textarea:focus {
+  padding: 12px;
+  padding-bottom: 9px;
+
+  border: 2px solid #8fbdec;
+  outline: none;
 }
 
 .user-navigation .button {
@@ -252,7 +316,7 @@ a {
   color: #323232;
 }
 
-.price-filter-container input {
+.price-field {
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
@@ -315,36 +379,33 @@ a {
   list-style: none;
 }
 
-.paginator a {
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 500;
-  color: #fff;
+.paginator li {
+  display: inline-block;
 }
 
-.paginator li {
-  padding-top: 3px;
+.paginator a {
+  display: block;
   width: 25px;
   height: 25px;
-  box-sizing: border-box;
 
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 500;
+  color: #fff;
   text-align: center;
 
-  background-color: transparent;
   border-radius: 50%;
 }
 
-.paginator li:hover:not(.current-page),
-.paginator li:focus:not(.current-page) {
+.paginator a:hover,
+.paginator a:focus {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.paginator .current-page {
-  background-color: #fff;
-}
-
-.current-page a {
+.paginator a:active {
   color: #323232;
+
+  background-color: #fff;
 }
 
 .slide-heading {
@@ -453,7 +514,7 @@ a {
   font-weight: 400;
 }
 
-.new-in-blog {
+.news {
   color: #323232;
 
   background-color: #fff;
@@ -461,13 +522,13 @@ a {
   background-repeat: no-repeat;
 }
 
-.new-in-blog h2 {
+.news .news-heading {
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
 }
 
-.new-in-blog a {
+.news a {
   color: #323232;
   font-size: 24px;
   line-height: 30px;
@@ -477,8 +538,8 @@ a {
   border-bottom: 2px solid #323232;
 }
 
-.new-in-blog a:hover,
-.new-in-blog a:focus {
+.news a:hover,
+.news a:focus {
   color: #e84d37;
 
   border-bottom: 2px solid #e84d37;
@@ -514,7 +575,7 @@ a {
   font-weight: 700;
 }
 
-.phone span {
+.phone .work-time {
   font-size: 14px;
   line-height: 22px;
   font-weight: 400;
@@ -585,7 +646,7 @@ a {
   background-color: #f8f7f4;
 }
 
-.feedback-container h3 {
+.feedback-heading {
   font-size: 24px;
   line-height: 28px;
   font-weight: 500;
