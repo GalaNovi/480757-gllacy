@@ -7,81 +7,83 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-    <header class="main-header">
-      <div class="logo">
-        <a href="index.html"><img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Глэйси"></a>
-      </div>
+  <body class="inner-page">
+    <header class="main-header container">
+      <div class="main-header-wrapper">
+        <div class="logo">
+          <a href="index.html"><img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Глэйси"></a>
+        </div>
 
-      <nav class="main-menu">
-        <ul class="main-navigation">
-          <li><a class="main-navigation-item catalog active" href="#">Каталог</a>
-            <ul class="catalog-navigation">
-              <li><a class="catalog-navigation-item new" href="#">Новинки</a></li>
-              <li><a class="catalog-navigation-item current" href="#">Сливочное</a></li>
-              <li><a class="catalog-navigation-item" href="#">Щербеты</a></li>
-              <li><a class="catalog-navigation-item" href="#">Фруктовый лед</a></li>
-              <li><a class="catalog-navigation-item" href="#">Мелорин</a></li>
-            </ul>
-          </li>
-          <li><a class="main-navigation-item" href="#">Доставка и оплата</a></li>
-          <li><a class="main-navigation-item" href="#">О Компании</a></li>
-        </ul>
-        <ul class="user-navigation">
-          <li><a class="user-navigation-item search" href="#">Поиск</a>
-            <div class="form-container search-container">
-              <form class="search-form" action="http://echo.htmlacademy.ru" method="post">
-                <p>
-                  <label class="visually-hidden" for="search-field">Поле ввода для поиска</label>
-                  <input id="search-field" type="search" name="search" value="" placeholder="Что ищем?">
-                </p>
-              </form>
-            </div>
-          </li>
-          <li><a class="user-navigation-item login" href="#">Вход</a>
-            <div class="form-container login-container">
-              <form class="login-form" action="http://echo.htmlacademy.ru" method="post">
-                <p>
-                  <label class="visually-hidden" for="email-field">Ваша электронная почта</label>
-                  <input id="email-field" type="email" name="email" value="" placeholder="Электронная почта">
-                </p>
-                <p>
-                  <label class="visually-hidden" for="password-field">Ваш пароль</label>
-                  <input id="password-field" type="password" name="password" value="" placeholder="Пароль">
-                </p>
-                <button class="button" type="submit">Войти</button>
-                <ul class="password-register">
-                  <li><a href="#">Забыли пароль?</a></li>
-                  <li><a href="#">Новая регистрация</a></li>
-                </ul>
-              </form>
-            </div>
-          </li>
-          <li><a class="user-navigation-item basket" href="#" aria-label="Корзина товаров">2 товара</a>
-            <div class="basket-container">
-              <h2 class="visually-hidden">Корзина товаров</h2>
-              <table>
-                <tr>
-                  <td><a class="basket-item-delete" href="#">Удалить</a></td>
-                  <td><img src="img/content-img/catalog-item-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
-                  <td>Пломбир с апельсиновым джемом</td>
-                  <td>1,5 кг x <span class="basket-item-price">200 руб.</span></td>
-                  <td>300 руб.</td>
-                </tr>
-                <tr>
-                  <td><a class="basket-item-delete" href="#">Удалить</a></td>
-                  <td><img src="img/content-img/catalog-item-3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
-                  <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-                  <td>1,5 кг x <span class="basket-item-price">300 руб.</span></td>
-                  <td>450 руб.</td>
-                </tr>
-              </table>
-              <p class="total-price">Итого: 750 руб.</p>
-              <a class="button" href="#">Оформить заказ</a>
-            </div>
-          </li>
-        </ul>
-      </nav>
+        <nav class="main-menu">
+          <ul class="main-navigation">
+            <li><a class="main-navigation-item catalog active" href="#">Каталог</a>
+              <ul class="catalog-navigation">
+                <li><a class="catalog-navigation-item new" href="#">Новинки</a></li>
+                <li><a class="catalog-navigation-item current" href="#">Сливочное</a></li>
+                <li><a class="catalog-navigation-item" href="#">Щербеты</a></li>
+                <li><a class="catalog-navigation-item" href="#">Фруктовый лед</a></li>
+                <li><a class="catalog-navigation-item" href="#">Мелорин</a></li>
+              </ul>
+            </li>
+            <li><a class="main-navigation-item" href="#">Доставка и оплата</a></li>
+            <li><a class="main-navigation-item" href="#">О Компании</a></li>
+          </ul>
+          <ul class="user-navigation">
+            <li><a class="user-navigation-item search" href="#">Поиск</a>
+              <div class="form-container search-container">
+                <form class="search-form" action="http://echo.htmlacademy.ru" method="post">
+                  <p>
+                    <label class="visually-hidden" for="search-field">Поле ввода для поиска</label>
+                    <input id="search-field" type="search" name="search" value="" placeholder="Что ищем?">
+                  </p>
+                </form>
+              </div>
+            </li>
+            <li><a class="user-navigation-item login" href="#">Вход</a>
+              <div class="form-container login-container">
+                <form class="login-form" action="http://echo.htmlacademy.ru" method="post">
+                  <p>
+                    <label class="visually-hidden" for="email-field">Ваша электронная почта</label>
+                    <input id="email-field" type="email" name="email" value="" placeholder="Электронная почта">
+                  </p>
+                  <p>
+                    <label class="visually-hidden" for="password-field">Ваш пароль</label>
+                    <input id="password-field" type="password" name="password" value="" placeholder="Пароль">
+                  </p>
+                  <button class="button" type="submit">Войти</button>
+                  <ul class="password-register">
+                    <li><a href="#">Забыли пароль?</a></li>
+                    <li><a href="#">Новая регистрация</a></li>
+                  </ul>
+                </form>
+              </div>
+            </li>
+            <li><a class="user-navigation-item basket" href="#" aria-label="Корзина товаров">2 товара</a>
+              <div class="basket-container">
+                <h2 class="visually-hidden">Корзина товаров</h2>
+                <table>
+                  <tr>
+                    <td><a class="basket-item-delete" href="#">Удалить</a></td>
+                    <td><img src="img/content-img/catalog-item-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
+                    <td>Пломбир с апельсиновым джемом</td>
+                    <td>1,5 кг x <span class="basket-item-price">200 руб.</span></td>
+                    <td>300 руб.</td>
+                  </tr>
+                  <tr>
+                    <td><a class="basket-item-delete" href="#">Удалить</a></td>
+                    <td><img src="img/content-img/catalog-item-3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
+                    <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                    <td>1,5 кг x <span class="basket-item-price">300 руб.</span></td>
+                    <td>450 руб.</td>
+                  </tr>
+                </table>
+                <p class="total-price">Итого: 750 руб.</p>
+                <a class="button" href="#">Оформить заказ</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
       <div class="time-number">
         <h3 class="visually-hidden">График работы и телефон</h3>
         <p class="work-time">С 10 до 20, ежедневно</p>
@@ -89,7 +91,7 @@
       </div>
     </header>
 
-    <main>
+    <main class="container">
       <ul class="breadcrumbs">
         <li><a href="index.html">Главная</a></li>
         <li><a href="catalog.html">Каталог</a></li>
@@ -101,7 +103,7 @@
       <section class="product-filter">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <form class="filter-form" action="http://echo.htmlacademy.ru" method="post">
-          <p>
+          <p class="sorting-filter-container">
             <label class="filter-type" for="sorting-filter">Сортировка:</label>
             <select id="sorting-filter" class="sorting-filter" name="sorting-filter">
               <option value="popularity">по популярности</option>
@@ -110,22 +112,21 @@
               <option value="fat-content">по жирности</option>
             </select>
           </p>
-            <div class="price-filter-container">
-              <p>
-                <span class="filter-type">Цена:</span>
-                <input class="price-field" id="price-min" type="text" name="price-min" value="100">
-                <label for="price-min">руб.</label>
-                -
-                <input class="price-field" id="price-max" type="text" name="price-max" value="500">
-                <label for="price-max">руб.</label>
-              </p>
-              <div class="line">
-                <div class="slider-min"></div>
-                <div class="line-between-sliders"></div>
-                <div class="slider-max"></div>
-              </div>
+          <div class="price-filter-container">
+            <p>
+              <span class="filter-type">Цена:</span>
+              <input class="price-field" id="price-min" type="text" name="price-min" value="100">
+              <label for="price-min">руб.</label>
+              -                <input class="price-field" id="price-max" type="text" name="price-max" value="500">
+              <label for="price-max">руб.</label>
+            </p>
+            <div class="line">
+              <div class="slider-min"></div>
+              <div class="line-between-sliders"></div>
+              <div class="slider-max"></div>
             </div>
-          <fieldset>
+          </div>
+          <fieldset class="fat-content-container">
             <legend class="filter-type">Жирность:</legend>
             <p>
               <label>
@@ -152,7 +153,7 @@
               </label>
             </p>
           </fieldset>
-          <fieldset>
+          <fieldset class="fillers-container">
             <legend class="filter-type">Наполнители:</legend>
             <p>
               <label>
@@ -336,7 +337,6 @@
             <div class="price">420<span class="ruble">P</span><span>/кг</span></div>
             <a class="button" href="#">Быстрый просмотр</a>
           </li>
-
         </ul>
 
         <ul class="paginator">
@@ -349,7 +349,7 @@
       </section>
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer container">
       <div class="footer-socials">
         <h3 class="visually-hidden">Мы в социальных сетях</h3>
         <ul class="socials-list">

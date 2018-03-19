@@ -23,6 +23,14 @@ a {
   text-decoration: none;
 }
 
+.container {
+  width: 1200px;
+  padding: 0 27px;
+  margin: 0 auto;
+
+  box-sizing: border-box;
+}
+
 .button {
   padding-top: 13px;
   padding-bottom: 13px;
@@ -49,7 +57,28 @@ a {
   box-shadow: inset 0 2px 2px 0 rgba(172, 16, 0, 1);
 }
 
+.main-header {
+  margin-bottom: 10px;
+}
+
+.main-header-wrapper {
+  display: flex;
+}
+
+.logo {
+  width: 154px;
+  height: 64px;
+  margin-right: 10px;
+}
+
+.main-menu {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
 .main-navigation {
+  width: 600px;
   padding: 0;
   margin: 0;
 
@@ -122,6 +151,7 @@ a {
 }
 
 .user-navigation {
+  width: 300px;
   padding: 0;
   margin: 0;
 
@@ -158,7 +188,6 @@ textarea {
   background-color: #fff;
   border: 1px solid #d3d3d2;
   border-radius: 5px;
-  box-sizing: border-box;
 }
 
 input[type="search"]:hover,
@@ -246,6 +275,45 @@ textarea:focus {
   font-weight: 700;
 }
 
+.time-number {
+  float: right;
+}
+
+.time-number p {
+  margin: 0;
+  padding: 0;
+}
+
+.inner-page main {
+  margin-top: 25px;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-slider {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.index-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.offer {
+  width: 560px;
+}
+
+.top-products {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
 .catalog-heading {
   font-size: 35px;
   line-height: 41px;
@@ -280,6 +348,15 @@ textarea:focus {
   font-weight: 400;
 
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+}
+
+.product-filter {
+  width: 879px;
+}
+
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .filter-type {
@@ -372,6 +449,10 @@ textarea:focus {
   cursor: pointer;
 }
 
+.inner-page .catalog-list {
+  margin-bottom: 80px;
+}
+
 .paginator {
   padding: 0;
   margin: 0;
@@ -456,10 +537,21 @@ textarea:focus {
 }
 
 .catalog-list {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 
   list-style: none;
+}
+
+.catalog-item {
+  width: 267px;
+  margin-right: 26px;
+}
+
+.catalog-item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .catalog-item-heading {
@@ -489,6 +581,9 @@ textarea:focus {
 }
 
 .features {
+  width: 100%;
+  margin-bottom: 40px;
+
   color: #323232;
 
   background-color: #eddfc2;
@@ -502,6 +597,8 @@ textarea:focus {
 }
 
 .features-list {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 
@@ -509,12 +606,16 @@ textarea:focus {
 }
 
 .features-item {
+  width: 485px;
+  margin-bottom: 10px;
+
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
 }
 
 .news {
+  width: 560px;
   color: #323232;
 
   background-color: #fff;
@@ -546,15 +647,52 @@ textarea:focus {
 }
 
 .subscribe {
+  width: 560px;
   color: #323232;
 
   background-color: #f0efed;
 }
 
+.map.container {
+  width: 1200px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.map {
+  width: 1200px;
+  height: 430px;
+  position: relative;
+}
+
 .contacts {
+  width: 302px;
+  position: absolute;
+  top: 62px;
+  right: 27px;
+
   color: #323232;
 
   background-color: #fdfdfe;
+}
+
+.main-footer {
+  display: flex;
+  margin-top: 18px;
+}
+
+.footer-socials {
+  width: 267px;
+  margin-right: 133px;
+}
+
+.other-info {
+  width: 330px;
+}
+
+.copyright {
+  width: 190px;
+  margin-left: auto;
 }
 
 .contact-type {
