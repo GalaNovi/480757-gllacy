@@ -1962,6 +1962,7 @@ textarea:focus {
   display: block;
   width: 25px;
   height: 25px;
+  margin-right: 3px;
 
   font-size: 16px;
   line-height: 25px;
@@ -1984,7 +1985,7 @@ textarea:focus {
 
 .next-page {
   margin-right: 0;
-  margin-left: 15px;
+  margin-left: 12px;
 }
 
 .previous-page::before {
