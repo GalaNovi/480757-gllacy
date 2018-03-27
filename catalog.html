@@ -37,7 +37,7 @@
                 <a class="user-navigation-item search" href="#"><span class="visually-hidden">Поиск</span>
                   <svg class="search-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px"
                   height="17px" viewBox="0 0 17 17" enable-background="new 0 0 17 17" xml:space="preserve">
-                    <path fill="#FFFFFF" d="M16.958,15.527L11.75,10.32C12.533,9.247,13,7.93,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5
+                    <path d="M16.958,15.527L11.75,10.32C12.533,9.247,13,7.93,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5
                     S2.91,13,6.5,13c1.438,0,2.763-0.473,3.839-1.263l5.205,5.204L16.958,15.527z M6.5,11C4.019,11,2,8.981,2,6.5S4.019,2,6.5,2
                     S11,4.019,11,6.5S8.981,11,6.5,11z"/>
                   </svg>
@@ -47,7 +47,7 @@
                     <form class="search-form" action="http://echo.htmlacademy.ru" method="post">
                       <p>
                         <label class="visually-hidden" for="search-field">Поле ввода для поиска</label>
-                        <input id="search-field" type="search" name="search" value="" placeholder="Что ищем?">
+                        <input class="search-field" id="search-field" type="search" name="search" value="" placeholder="Что ищем?">
                       </p>
                     </form>
                   </div>
@@ -67,11 +67,11 @@
                     <form class="login-form" action="http://echo.htmlacademy.ru" method="post">
                       <p>
                         <label class="visually-hidden" for="email-field">Ваша электронная почта</label>
-                        <input id="email-field" type="email" name="email" value="" required placeholder="Электронная почта">
+                        <input class="email-field" id="email-field" type="email" name="email" value="" required placeholder="Электронная почта">
                       </p>
                       <p>
                         <label class="visually-hidden" for="password-field">Ваш пароль</label>
-                        <input id="password-field" type="password" name="password" value="" required placeholder="Пароль">
+                        <input class="password-field" id="password-field" type="password" name="password" value="" required placeholder="Пароль">
                       </p>
                       <div class="button-register-wrapper">
                         <button class="button" type="submit">Войти</button>
@@ -86,7 +86,7 @@
               </li>
               <li class="user-basket">
                 <a class="user-navigation-item basket not-empty" href="#" aria-label="Корзина товаров">
-                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  <svg class="basket-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
                     <polygon fill="transparent" points="5.888,4.031 6.922,13 17.372,13 18.548,4.031 "/>
                     <circle fill="#fff" cx="6.984" cy="18" r="2"/>
@@ -182,25 +182,25 @@
               <div class="fat-options-wrapper">
                 <p>
                 <label>
-                  <input class="visually-hidden" type="radio" name="fat-content" value="0%">
+                  <input class="visually-hidden fat-radiobutton" type="radio" name="fat-content" value="0%">
                   <span class="option-text">0%</span>
                 </label>
                 </p>
                 <p>
                 <label>
-                  <input class="visually-hidden" type="radio" name="fat-content" value="before-10%" checked>
+                  <input class="visually-hidden fat-radiobutton" type="radio" name="fat-content" value="before-10%" checked>
                   <span class="option-text">до 10%</span>
                 </label>
                 </p>
                 <p>
                 <label>
-                  <input class="visually-hidden" type="radio" name="fat-content" value="before-30%">
+                  <input class="visually-hidden fat-radiobutton" type="radio" name="fat-content" value="before-30%">
                   <span class="option-text">до 30%</span>
                 </label>
                 </p>
                 <p>
                 <label>
-                  <input class="visually-hidden" type="radio" name="fat-content" value="after-30%">
+                  <input class="visually-hidden fat-radiobutton" type="radio" name="fat-content" value="after-30%">
                   <span class="option-text">выше 30%</span>
                 </label>
                 </p>
@@ -211,31 +211,31 @@
               <div class="fillers-options-wrapper">
                 <p>
                   <label>
-                    <input class="visually-hidden" type="checkbox" name="chocolade" value="chocolade" checked>
+                    <input class="visually-hidden filler-checkbox" type="checkbox" name="chocolade" value="chocolade" checked>
                     <span class="option-text">шоколадные</span>
                   </label>
                 </p>
                 <p>
                   <label>
-                    <input class="visually-hidden" type="checkbox" name="sugar-powders" value="sugar-powders" checked>
+                    <input class="visually-hidden filler-checkbox" type="checkbox" name="sugar-powders" value="sugar-powders" checked>
                     <span class="option-text">сахарные присыпки</span>
                   </label>
                 </p>
                 <p>
                   <label>
-                    <input class="visually-hidden" type="checkbox" name="fruits" value="fruits">
+                    <input class="visually-hidden filler-checkbox" type="checkbox" name="fruits" value="fruits">
                     <span class="option-text">фрукты</span>
                   </label>
                 </p>
                 <p>
                   <label>
-                    <input class="visually-hidden" type="checkbox" name="syrups" value="syrups">
+                    <input class="visually-hidden filler-checkbox" type="checkbox" name="syrups" value="syrups">
                     <span class="option-text">сиропы</span>
                   </label>
                 </p>
                 <p>
                   <label>
-                    <input class="visually-hidden" type="checkbox" name="jams" value="jams">
+                    <input class="visually-hidden filler-checkbox" type="checkbox" name="jams" value="jams">
                     <span class="option-text">джемы</span>
                   </label>
                 </p>
@@ -316,7 +316,7 @@
                 </a>
               </h3>
               <div class="img-price-wrapper">
-                <img src="img/content-img/catalog-item-5.jpg" alt="Сливочное
+                <img src="img/content-img/catalog-item-5.jpg" width="267" height="267" alt="Сливочное
                   с брусничным джемом">
                 <div class="price">325 <span class="ruble">P</span><span class="kg">/кг</span></div>
               </div>
@@ -331,7 +331,7 @@
                 </a>
               </h3>
               <div class="img-price-wrapper">
-                <img src="img/content-img/catalog-item-6.jpg" alt="Сливочно-черничное
+                <img src="img/content-img/catalog-item-6.jpg" width="267" height="267" alt="Сливочно-черничное
                   с цельными ягодами черники">
                 <div class="price">410 <span class="ruble">P</span><span class="kg">/кг</span></div>
               </div>
@@ -346,7 +346,7 @@
                 </a>
               </h3>
               <div class="img-price-wrapper">
-                <img src="img/content-img/catalog-item-7.jpg" alt="Сливочно-лимонное
+                <img src="img/content-img/catalog-item-7.jpg" width="267" height="267" alt="Сливочно-лимонное
                   с карамельной присыпкой">
                 <div class="price">375 <span class="ruble">P</span><span class="kg">/кг</span></div>
               </div>
@@ -361,7 +361,7 @@
                 </a>
               </h3>
               <div class="img-price-wrapper">
-                <img src="img/content-img/catalog-item-8.jpg" alt="Сливочное с
+                <img src="img/content-img/catalog-item-8.jpg" width="267" height="267" alt="Сливочное с
                   шоколадной стружкой">
                 <div class="price">320 <span class="ruble">P</span><span class="kg">/кг</span></div>
               </div>
@@ -376,7 +376,7 @@
                 </a>
               </h3>
               <div class="img-price-wrapper">
-                <img src="img/content-img/catalog-item-9.jpg" alt="Сливочно-ванильное
+                <img src="img/content-img/catalog-item-9.jpg" width="267" height="267" alt="Сливочно-ванильное
                   с кусочками шоколада">
                 <div class="price">440 <span class="ruble">P</span><span class="kg">/кг</span></div>
               </div>
@@ -391,7 +391,7 @@
                 </a>
               </h3>
               <div class="img-price-wrapper">
-                <img src="img/content-img/catalog-item-10.jpg" alt="Сливочноe с
+                <img src="img/content-img/catalog-item-10.jpg" width="267" height="267" alt="Сливочноe с
                   ментоловым сиропом">
                 <div class="price">435 <span class="ruble">P</span><span class="kg">/кг</span></div>
               </div>
@@ -406,7 +406,7 @@
                 </a>
               </h3>
               <div class="img-price-wrapper">
-                <img src="img/content-img/catalog-item-11.jpg" alt="Сливочное
+                <img src="img/content-img/catalog-item-11.jpg" width="267" height="267" alt="Сливочное
                   с кусочками черного шоколада">
                 <div class="price">355 <span class="ruble">P</span><span class="kg">/кг</span></div>
               </div>
@@ -421,7 +421,7 @@
                 </a>
               </h3>
               <div class="img-price-wrapper">
-                <img src="img/content-img/catalog-item-12.jpg" alt="Сливочное
+                <img src="img/content-img/catalog-item-12.jpg" width="267" height="267" alt="Сливочное
                   с мятным сиропом">
                 <div class="price">420 <span class="ruble">P</span><span class="kg">/кг</span></div>
               </div>
@@ -431,13 +431,13 @@
           </ul>
 
           <ul class="paginator">
-            <li><a class="previous-page disabled"><span class="visually-hidden">Назад</span></a></li>
+            <li><a class="page-link previous-page disabled"><span class="visually-hidden">Назад</span></a></li>
             <li><a class="page-link current-page" aria-label="Страница 1">1</a></li>
             <li><a class="page-link" href="#" aria-label="Страница 2">2</a></li>
             <li><a class="page-link" href="#" aria-label="Страница 3">3</a></li>
             <li><a class="page-link" href="#" aria-label="Страница 4">4</a></li>
             <li><a class="page-link" href="#" aria-label="Страница 5">5</a></li>
-            <li><a class="next-page" href="#"><span class="visually-hidden">Вперед</span></a></li>
+            <li><a class="page-link next-page" href="#"><span class="visually-hidden">Вперед</span></a></li>
           </ul>
         </section>
       </main>
