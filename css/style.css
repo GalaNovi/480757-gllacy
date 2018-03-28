@@ -12,22 +12,41 @@ body {
   background-color: #849d8f;
   background-repeat: no-repeat;
   background-position: top center;
-
-  transition: background-color 0.5s ease;
-  transition: background-image 0.5s ease;
 }
 
 .wrapper-1 {
-  background-image: url("../img/background-img/two-icecream-1.png");
+  transition:
+    background-color 0.5s ease,
+    background-image 0.5s ease;
+  background: #849d8f url("../img/background-img/two-icecream-1.png") no-repeat top center;
 }
 
 .wrapper-2 {
-  background-color: #8996a6;
-  background-image: url("../img/background-img/two-icecream-2.png");
+  transition:
+    background-color 0.5s ease,
+    background-image 0.5s ease;
+  background: #8996a6 url("../img/background-img/two-icecream-2.png") no-repeat top center;
 }
 
 .wrapper-3 {
-  background-color: #9d8b84;
+  transition:
+    background-color 0.5s ease,
+    background-image 0.5s ease;
+  background: #9d8b84 url("../img/background-img/two-icecream-3.png") no-repeat top center;
+}
+
+.site-wrapper::before,
+.site-wrapper::after {
+  content: "";
+
+  visibility: hidden;
+}
+
+.site-wrapper::before {
+  background-image: url("../img/background-img/two-icecream-2.png");
+}
+
+.site-wrapper::after {
   background-image: url("../img/background-img/two-icecream-3.png");
 }
 
@@ -325,8 +344,15 @@ li:hover .main-navigation-item {
   padding: 0;
 }
 
+.search-container label {
+  position: absolute;
+
+  clip: rect(0 0 0 0);
+}
+
 .search-field {
   width: 310px;
+  height: 44px;
   padding: 14px;
   padding-top: 10px;
   padding-bottom: 8px;
@@ -408,6 +434,12 @@ li:hover .main-navigation-item {
   padding: 0;
 }
 
+.login-container label {
+  position: absolute;
+
+  clip: rect(0 0 0 0);
+}
+
 .login {
   display: flex;
   align-items: center;
@@ -424,6 +456,7 @@ li:hover .main-navigation-item {
 .email-field,
 .password-field {
   width: 240px;
+  height: 44px;
   padding: 14px;
   padding-top: 10px;
   padding-bottom: 8px;
@@ -843,6 +876,8 @@ li:hover .main-navigation-item {
 
 .slide.active {
   display: block;
+
+  color: white;
 }
 
 .slide-heading {
@@ -901,11 +936,13 @@ li:hover .main-navigation-item {
   border: 2px solid #fff;
 }
 
-.toggle:hover {
+.toggle:hover,
+.toggle:focus {
   background-color: rgba(255, 255, 255, 0.4);
 
   cursor: pointer;
 }
+
 
 .toggle.active {
   background-color: #fff;
@@ -1020,6 +1057,7 @@ li:hover .main-navigation-item {
 .highlighting {
   position: absolute;
   top: -6px;
+  left: -5%;
 
   display: none;
   width: calc(100% + 10%);
@@ -1159,6 +1197,7 @@ li:hover .main-navigation-item {
 
 .catalog-item .button {
   position: absolute;
+  left: 50%;
   bottom: -60px;
 
   display: none;
@@ -1179,6 +1218,8 @@ li:hover .main-navigation-item {
   border-bottom-left-radius: 17px 22px;
   border-top-right-radius: 17px 22px;
   border-bottom-right-radius: 17px 22px;
+
+  transform: translateX(-50%);
 
   order: 3;
   z-index: 1;
@@ -1205,7 +1246,6 @@ li:hover .main-navigation-item {
 .catalog-item:hover .button {
   display: inline-block;
 }
-
 /* =========================== Преимущества ========================== */
 
 .features {
@@ -1350,6 +1390,12 @@ li:hover .main-navigation-item {
   box-sizing: border-box;
 }
 
+.subscribe-form label {
+  position: absolute;
+
+  clip: rect(0 0 0 0);
+}
+
 .subscribe-wrapper {
   padding: 30px 20px 35px;
   width: 100%;
@@ -1385,12 +1431,13 @@ li:hover .main-navigation-item {
 
 .subscribe-email-field {
   width: 100%;
+  height: 44px;
   margin: 0;
   padding: 14px;
   padding-top: 10px;
   padding-bottom: 8px;
 
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   color: #000;
@@ -1828,15 +1875,19 @@ li:hover .main-navigation-item {
 }
 
 .sorting-filter-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-
   width: 200px;
   min-height: 65px;
   margin: 0;
   margin-right: 8px;
   padding: 0;
+}
+
+.sorting-filter-wrapper .filter-type {
+  display: inline-block;
+  margin-top: -2px;
+  margin-bottom: 6px;
+
+  vertical-align: middle;
 }
 
 .sorting-filter {
@@ -1853,9 +1904,15 @@ li:hover .main-navigation-item {
   background-position: 168px 13px;
   border-radius: 20px;
 
-  -moz-appearance: none;
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
   cursor: pointer;
+}
+
+.sorting-filter::-ms-expand {
+  display: none;
 }
 
 .sorting-filter > option {
@@ -2314,7 +2371,7 @@ li:hover .main-navigation-item {
 
   display: none;
   padding: 17px 24px;
-  width: 477px;
+  min-width: 477px;
   box-sizing: border-box;
 
   color: #323232;
@@ -2326,6 +2383,12 @@ li:hover .main-navigation-item {
   transform: translateX(-50%);
 
   z-index: 2;
+}
+
+.feedback-container label {
+  position: absolute;
+
+  clip: rect(0 0 0 0);
 }
 
 .feedback-container p {
@@ -2353,7 +2416,7 @@ li:hover .main-navigation-item {
   margin: 0;
   margin-bottom: 20px;
 
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   color: #000;
@@ -2363,6 +2426,16 @@ li:hover .main-navigation-item {
   border-radius: 5px;
 
   box-sizing: border-box;
+}
+
+.feedback-name-field,
+.feedback-email-field {
+  height: 44px;
+}
+
+.feedback-wishes-field {
+  min-height: 160px;
+  min-width: 429px;
 }
 
 .feedback-name-field:-ms-input-placeholder,
@@ -2457,6 +2530,10 @@ li:hover .main-navigation-item {
   cursor: pointer;
 }
 
+.modal-close:active {
+  outline: none;
+}
+
 .modal-close::before,
 .modal-close::after {
   position: absolute;
@@ -2479,7 +2556,7 @@ li:hover .main-navigation-item {
   transform: rotate(-45deg);
 }
 
-.black-out {
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -2488,15 +2565,63 @@ li:hover .main-navigation-item {
   width: 100%;
   height: 100%;
 
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
 
   z-index: 1;
 }
 
-.feedback-container.enabled {
+.modal-show {
+  display: block;
+
+  animation: bounce 0.6s;
+}
+
+.enabled {
   display: block;
 }
 
-.black-out.enabled {
-  display: block;
+.error {
+  animation: error 0.5s;
+}
+
+/* =========================== Анимация ================================= */
+
+@keyframes error {
+  0%,
+  100% {
+    transform: translateX(-50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-51%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(-49%);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -2000px) scale(1);
+  }
+
+  70% {
+    transform: translate(-50%, 30px) scale(1);
+  }
+
+  90% {
+    transform: translate(-50%, -10px) scale(1.01);
+  }
+
+  100% {
+    transform: translate(-50%, 0) scale(1);
+  }
 }
