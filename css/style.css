@@ -105,6 +105,7 @@ a {
 
 .main-navigation {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
 
   width: 600px;
@@ -224,7 +225,7 @@ li:hover .main-navigation-item {
 
 .catalog-navigation li:first-child::after {
   position: absolute;
-  top: 33px;
+  bottom: 0px;
   left: 6px;
 
   width: 128px;
@@ -261,6 +262,7 @@ li:hover .main-navigation-item {
 
 .user-navigation {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   align-items: flex-start;
 
@@ -566,6 +568,7 @@ li:hover .main-navigation-item {
   color: #fff;
 
   background: linear-gradient(to bottom, #f26843, #e74a35);
+  background-color: #ed5b3d;
   box-shadow: 0 1px 2px 0 rgba(172, 16, 0, 0.64);
   border-top-left-radius: 17px 22px;
   border-bottom-left-radius: 17px 22px;
@@ -576,11 +579,13 @@ li:hover .main-navigation-item {
 
 .login-form .button:hover {
   background: linear-gradient(to bottom, #f58669, #ec6f5e);
+  background-color: #ed5b3d;
   box-shadow: 0 1px 2px 0 rgba(172, 16, 0, 1);
 }
 
 .login-form .button:active {
   background: linear-gradient(to bottom, #d74632, #e1613e);
+  background-color: #ed5b3d;
   box-shadow: inset 0 1px 2px 0 rgba(172, 16, 0, 1);
 
   outline: none;
@@ -798,6 +803,7 @@ li:hover .main-navigation-item {
   color: #fff;
 
   background: linear-gradient(to bottom, #f26843, #e74a35);
+  background-color: #ed5b3d;
   box-shadow: 0 1px 2px 0 rgba(172, 16, 0, 0.64);
   border-top-left-radius: 17px 22px;
   border-bottom-left-radius: 17px 22px;
@@ -808,11 +814,13 @@ li:hover .main-navigation-item {
 
 .user-basket .button:hover {
   background: linear-gradient(to bottom, #f58669, #ec6f5e);
+  background-color: #ed5b3d;
   box-shadow: 0 1px 2px 0 rgba(172, 16, 0, 1);
 }
 
 .user-basket .button:active {
   background: linear-gradient(to bottom, #d74632, #e1613e);
+  background-color: #ed5b3d;
   box-shadow: inset 0 1px 2px 0 rgba(172, 16, 0, 1);
 }
 
@@ -907,17 +915,20 @@ li:hover .main-navigation-item {
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 
   background: linear-gradient(to bottom, #f26843, #e74a35);
+  background-color: #ed5b3d;
   box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
   border-radius: 35px;
 }
 
 .slide .button:hover {
   background: linear-gradient(to bottom, #f58669, #ec6f5e);
+  background-color: #ed5b3d;
   box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 1);
 }
 
 .slide .button:active {
   background: linear-gradient(to bottom, #d74632, #e1613e);
+  background-color: #ed5b3d;
   box-shadow: inset 0 2px 2px 0 rgba(172, 16, 0, 1);
 }
 
@@ -993,11 +1004,11 @@ li:hover .main-navigation-item {
 }
 
 .offer-raspberry {
-  background: #6e1427 url(../img/background-img/raspbarry.jpg) no-repeat;
+  background: #6e1427 url(../img/background-img/raspbarry.jpg) repeat-y;
 }
 
 .offer-chocolade {
-  background: #442a1d url(../img/background-img/chocolade.jpg) no-repeat;
+  background: #442a1d url(../img/background-img/chocolade.jpg) repeat-y;
 }
 
 .offer-button-wrapper {
@@ -1022,17 +1033,20 @@ li:hover .main-navigation-item {
   color: #fff;
 
   background: linear-gradient(to bottom, #f26843, #e74a35);
+  background-color: #ed5b3d;
   box-shadow: 0 1px 2px 0 rgba(172, 16, 0, 0.64);
   border-radius: 25px;
 }
 
 .offer .button:hover {
   background: linear-gradient(to bottom, #f58669, #ec6f5e);
+  background-color: #ed5b3d;
   box-shadow: 0 1px 2px 0 rgba(172, 16, 0, 1);
 }
 
 .offer .button:active {
   background: linear-gradient(to bottom, #d74632, #e1613e);
+  background-color: #ed5b3d;
   box-shadow: inset 0 1px 2px 0 rgba(172, 16, 0, 1);
 }
 
@@ -1220,6 +1234,7 @@ li:hover .main-navigation-item {
   color: #fff;
 
   background: linear-gradient(to bottom, #f26843, #e74a35);
+  background-color: #ed5b3d;
   box-shadow: 0 1px 2px 0 rgba(172, 16, 0, 0.64);
   border-top-left-radius: 17px 22px;
   border-bottom-left-radius: 17px 22px;
@@ -1234,11 +1249,13 @@ li:hover .main-navigation-item {
 
 .catalog-item .button:hover {
   background: linear-gradient(to bottom, #f58669, #ec6f5e);
+  background-color: #ed5b3d;
   box-shadow: 0 1px 2px 0 rgba(172, 16, 0, 1);
 }
 
 .catalog-item .button:active {
   background: linear-gradient(to bottom, #d74632, #e1613e);
+  background-color: #ed5b3d;
   box-shadow: inset 0 1px 2px 0 rgba(172, 16, 0, 1);
 }
 
@@ -1406,6 +1423,7 @@ li:hover .main-navigation-item {
 .subscribe-wrapper {
   padding: 30px 20px 35px;
   width: 100%;
+  height: 100%;
 
   background-color: #f0efed;
   border-radius: 12px;
@@ -1500,6 +1518,7 @@ li:hover .main-navigation-item {
   color: #fff;
 
   background: linear-gradient(to bottom, #f26843, #e74a35);
+  background-color: #ed5b3d;
   box-shadow: 0 1px 2px 0 rgba(172, 16, 0, 0.64);
   border-radius: 25px;
   border: none;
@@ -1507,11 +1526,13 @@ li:hover .main-navigation-item {
 
 .subscribe-form .button:hover {
   background: linear-gradient(to bottom, #f58669, #ec6f5e);
+  background-color: #ed5b3d;
   box-shadow: 0 1px 2px 0 rgba(172, 16, 0, 1);
 }
 
 .subscribe-form .button:active {
   background: linear-gradient(to bottom, #d74632, #e1613e);
+  background-color: #ed5b3d;
   box-shadow: inset 0 1px 2px 0 rgba(172, 16, 0, 1);
 
   outline: none;
@@ -1630,6 +1651,7 @@ li:hover .main-navigation-item {
   color: #fff;
 
   background: linear-gradient(to bottom, #f26843, #e74a35);
+  background-color: #ed5b3d;
   box-shadow: 0 1px 2px 0 rgba(172, 16, 0, 0.64);
   border-radius: 25px;
   border: none;
@@ -1638,11 +1660,13 @@ li:hover .main-navigation-item {
 
 .contacts .button:hover {
   background: linear-gradient(to bottom, #f58669, #ec6f5e);
+  background-color: #ed5b3d;
   box-shadow: 0 1px 2px 0 rgba(172, 16, 0, 1);
 }
 
 .contacts .button:active {
   background: linear-gradient(to bottom, #d74632, #e1613e);
+  background-color: #ed5b3d;
   box-shadow: inset 0 1px 2px 0 rgba(172, 16, 0, 1);
 }
 
@@ -2507,6 +2531,7 @@ li:hover .main-navigation-item {
   color: #fff;
 
   background: linear-gradient(to bottom, #f26843, #e74a35);
+  background-color: #ed5b3d;
   box-shadow: 0 1px 2px 0 rgba(172, 16, 0, 0.64);
   border-radius: 25px;
   border: none;
@@ -2515,11 +2540,13 @@ li:hover .main-navigation-item {
 .feedback-form .button:hover,
 .feedback-form .button:focus {
   background: linear-gradient(to bottom, #f58669, #ec6f5e);
+  background-color: #ed5b3d;
   box-shadow: 0 1px 2px 0 rgba(172, 16, 0, 1);
 }
 
 .feedback-form .button:active {
   background: linear-gradient(to bottom, #d74632, #e1613e);
+  background-color: #ed5b3d;
   box-shadow: inset 0 1px 2px 0 rgba(172, 16, 0, 1);
 
   outline: none;
