@@ -1,13 +1,7 @@
-var toggle1 = document.querySelector('.toggle-1');
-var toggle2 = document.querySelector('.toggle-2');
-var toggle3 = document.querySelector('.toggle-3');
-var slide1 = document.querySelector('.slide-1');
-var slide2 = document.querySelector('.slide-2');
-var slide3 = document.querySelector('.slide-3');
-var siteWrapper = document.querySelector('.site-wrapper');
-var wrapper1 = document.querySelector('.wrapper-1');
-var wrapper2 = document.querySelector('.wrapper-2');
-var wrapper3 = document.querySelector('.wrapper-3');
+var toggles = document.querySelectorAll('.toggle');
+var slides = document.querySelectorAll('.slide');
+var wrapper = document.querySelector('.site-wrapper');
+var active = 0;
 var feedbackOpen = document.querySelector('.js-feedback-button');
 var feedback = document.querySelector('.feedback-container');
 var feedbackClose = document.querySelector('.modal-close');
@@ -19,44 +13,21 @@ var feedbackWishes = feedback.querySelector('[name=feedback-wishes]');
 var isStorageSupport = true;
 var storage = "";
 
-toggle1.addEventListener ('click', function (evt) {
-  evt.preventDefault();
-  toggle2.classList.remove('active');
-  toggle3.classList.remove('active');
-  toggle1.classList.add('active');
-  slide2.classList.remove('active');
-  slide3.classList.remove('active');
-  slide1.classList.add('active');
-  siteWrapper.classList.remove('wrapper-2');
-  siteWrapper.classList.remove('wrapper-3');
-  siteWrapper.classList.add('wrapper-1');
-})
+for (i = 0; i < toggles.length; i++) {
+  setSlider(i);
+}
 
-toggle2.addEventListener ('click', function (evt) {
-  evt.preventDefault();
-  toggle1.classList.remove('active');
-  toggle3.classList.remove('active');
-  toggle2.classList.add('active');
-  slide1.classList.remove('active');
-  slide3.classList.remove('active');
-  slide2.classList.add('active');
-  siteWrapper.classList.remove('wrapper-1');
-  siteWrapper.classList.remove('wrapper-3');
-  siteWrapper.classList.add('wrapper-2');
-})
-
-toggle3.addEventListener ('click', function (evt) {
-  evt.preventDefault();
-  toggle1.classList.remove('active');
-  toggle2.classList.remove('active');
-  toggle3.classList.add('active');
-  slide1.classList.remove('active');
-  slide2.classList.remove('active');
-  slide3.classList.add('active');
-  siteWrapper.classList.remove('wrapper-1');
-  siteWrapper.classList.remove('wrapper-2');
-  siteWrapper.classList.add('wrapper-3');
-})
+function setSlider(number) {
+  toggles[number].onclick = function(e) {
+    slides[active].classList.remove('active');
+    toggles[active].classList.remove('active');
+    wrapper.classList.remove('wrapper-' + (active+1));
+    active = number;
+    slides[active].classList.add('active');
+    toggles[active].classList.add('active');
+    wrapper.classList.add('wrapper-' + (number+1));
+  }
+}
 
 feedbackOpen.addEventListener('click', function(evt) {
   evt.preventDefault();

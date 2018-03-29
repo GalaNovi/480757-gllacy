@@ -6,33 +6,30 @@ body {
   font-weight: 400;
 }
 
-.site-wrapper {
+.site-wrapper  {
   min-width: 1200px;
 
   background-color: #849d8f;
-  background-repeat: no-repeat;
   background-position: top center;
+  background-repeat: no-repeat;
+
+  transition: background-color 1s ease-in-out, background-image 0.5s ease-in-out;
 }
 
 .wrapper-1 {
-  transition:
-    background-color 0.5s ease,
-    background-image 0.5s ease;
-  background: #849d8f url("../img/background-img/two-icecream-1.png") no-repeat top center;
+  background-image: url("../img/background-img/two-icecream-1.png");
+  background-color: #849d8f;
+
 }
 
 .wrapper-2 {
-  transition:
-    background-color 0.5s ease,
-    background-image 0.5s ease;
-  background: #8996a6 url("../img/background-img/two-icecream-2.png") no-repeat top center;
+  background-image: url("../img/background-img/two-icecream-2.png");
+  background-color: #8996a6;
 }
 
 .wrapper-3 {
-  transition:
-    background-color 0.5s ease,
-    background-image 0.5s ease;
-  background: #9d8b84 url("../img/background-img/two-icecream-3.png") no-repeat top center;
+  background-image: url("../img/background-img/two-icecream-3.png");
+  background-color: #9d8b84;
 }
 
 .site-wrapper::before,
@@ -92,6 +89,8 @@ a {
 }
 
 .logo {
+  flex-shrink: 0;
+
   width: 154px;
   height: 64px;
   margin-right: 10px;
@@ -583,6 +582,8 @@ li:hover .main-navigation-item {
 .login-form .button:active {
   background: linear-gradient(to bottom, #d74632, #e1613e);
   box-shadow: inset 0 1px 2px 0 rgba(172, 16, 0, 1);
+
+  outline: none;
 }
 
 .password-register {
@@ -941,11 +942,14 @@ li:hover .main-navigation-item {
   background-color: rgba(255, 255, 255, 0.4);
 
   cursor: pointer;
-}
 
+  outline: none;
+}
 
 .toggle.active {
   background-color: #fff;
+
+  outline: none;
 }
 
 /*=========================== Предложения =============================*/
@@ -1060,8 +1064,8 @@ li:hover .main-navigation-item {
   left: -5%;
 
   display: none;
-  width: calc(100% + 10%);
-  height: 405px;
+  width: 110%;
+  height: 125%;
 
   content: "";
 
@@ -1075,6 +1079,7 @@ li:hover .main-navigation-item {
 
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: center;
 
   width: 267px;
@@ -1165,8 +1170,10 @@ li:hover .main-navigation-item {
 }
 
 .catalog-item-heading {
-  padding: 0;
-  padding-top: 10px;
+  width: 100%;
+  min-height: 47px;
+  padding: 10px;
+  padding-bottom: 0px;
   margin: 0;
 
   text-align: center;
@@ -1506,6 +1513,8 @@ li:hover .main-navigation-item {
 .subscribe-form .button:active {
   background: linear-gradient(to bottom, #d74632, #e1613e);
   box-shadow: inset 0 1px 2px 0 rgba(172, 16, 0, 1);
+
+  outline: none;
 }
 
 /* ======================== Карта + обратная связь ================== */
@@ -1788,13 +1797,12 @@ li:hover .main-navigation-item {
 }
 
 /* ======================= Внутренняя страница ======================= */
-
-.inner-page main {
-  margin-top: 25px;
+.inner-page header {
+  margin-bottom: 25px;
 }
 
 .inner-page .catalog-list {
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .breadcrumbs {
@@ -2226,10 +2234,7 @@ li:hover .main-navigation-item {
 
   background-color: rgba(255, 255, 255, 0.2);
   border: 2px solid #fff;
-  border-top-left-radius: 17px 22px;
-  border-bottom-left-radius: 17px 22px;
-  border-top-right-radius: 17px 22px;
-  border-bottom-right-radius: 17px 22px;
+  border-radius: 20px;
 }
 
 .filter-button:hover,
@@ -2262,6 +2267,7 @@ li:hover .main-navigation-item {
 
   padding: 0;
   margin: 0;
+  margin-bottom: 10px;
 
   list-style: none;
 }
@@ -2506,7 +2512,8 @@ li:hover .main-navigation-item {
   border: none;
 }
 
-.feedback-form .button:hover {
+.feedback-form .button:hover,
+.feedback-form .button:focus {
   background: linear-gradient(to bottom, #f58669, #ec6f5e);
   box-shadow: 0 1px 2px 0 rgba(172, 16, 0, 1);
 }
@@ -2514,6 +2521,8 @@ li:hover .main-navigation-item {
 .feedback-form .button:active {
   background: linear-gradient(to bottom, #d74632, #e1613e);
   box-shadow: inset 0 1px 2px 0 rgba(172, 16, 0, 1);
+
+  outline: none;
 }
 
 .modal-close {
