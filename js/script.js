@@ -93,7 +93,6 @@ form.addEventListener('submit', function(evt) {
     feedback.classList.remove('error');
     feedback.offsetWidth = feedback.offsetWidth;
     feedback.classList.add('error');
-    console.log('it work');
   }
   else {
     if (isStorageSupport) {
